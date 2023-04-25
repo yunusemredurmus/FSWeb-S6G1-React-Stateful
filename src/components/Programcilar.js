@@ -12,8 +12,7 @@ Yorumları takip edin.
 */
 
 import React from 'react';
-/* ADIM 0  */
-
+import { useState } from 'react';
 
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
@@ -28,6 +27,8 @@ export const enIyilerListesi = [
 ];
 
 export default function Programcilar() {
+    const [enIyiListe , setenIyiListe] = useState (enIyilerListesi);
+    const [id , setId] = useState(null);
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
 
